@@ -47,7 +47,12 @@ public class PlayerController : MonoBehaviour
     }
 
     void Animate(){
-        animator.SetFloat("Horizontal", movementDirection.x);
-        animator.SetFloat("Vertical", movementDirection.y);
+        if(movementDirection != Vector2.zero) // that the character doesnt turn to front when stop moving
+        {
+            animator.SetFloat("Horizontal", movementDirection.x);
+            animator.SetFloat("Vertical", movementDirection.y);
+        }
+        
+        animator.SetFloat("Speed", movementSpeed);
     }
 }
