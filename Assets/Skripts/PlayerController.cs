@@ -12,19 +12,22 @@ public class PlayerController : MonoBehaviour
 
     [Space]
     [Header("Character statistics:")]  
-      public Vector2 movementDirection;
+    public Vector2 movementDirection;
     public float movementSpeed;
+    public bool endOfAiming;
 
     [Space]
     [Header("References:")]  
     public Rigidbody2D rb;
     public Animator animator;
 
+    public bool isMagician;
+
  
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -33,20 +36,39 @@ public class PlayerController : MonoBehaviour
         ProcessInputs();
         Move();
         Animate();
+
+        if (Input.GetButtonDown("Fire1") && isMagician)
+        {
+            StartCoroutine(AttackCo());
+        }
+        //Shoot();
     }
 
+    private IEnumerator AttackCo() // Coroutine läuft parallel ab
+    {
+        animator.SetBool("Attacking", true);
+        yield return null; //wait 1 frame
+        animator.SetBool("Attacking", false);
+        yield return new WaitForSeconds(.33f); //wait animation time
+    }
 
-    void ProcessInputs(){
-        movementDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+    void ProcessInputs()
+    {
+        movementDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         movementSpeed = Mathf.Clamp( movementDirection.magnitude, 0.0f, 1.0f);  // first value to clamp, min, max : Clamp to handle different Controller Input to behave the same
         movementDirection.Normalize(); // to dont change the speed of archer when using movementDirection
+
+        endOfAiming = Input.GetButtonUp("Fire1");
+
     }
 
-    void Move(){
+    void Move()
+    {
         rb.velocity = movementDirection * movementSpeed * MOVEMENT_BASE_SPEED;
     }
 
-    void Animate(){
+    void Animate()
+    {
         if(movementDirection != Vector2.zero) // that the character doesnt turn to front when stop moving
         {
             animator.SetFloat("Horizontal", movementDirection.x);
@@ -54,5 +76,13 @@ public class PlayerController : MonoBehaviour
         }
         
         animator.SetFloat("Speed", movementSpeed);
+    }
+
+    void Shoot()
+    {
+        Vector2 shootingDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        gameObject.transform.position = shootingDirection;
+        shootingDirection.Normalize();
+
     }
 }
