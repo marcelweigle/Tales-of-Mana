@@ -22,12 +22,14 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
 
     public bool isMagician;
+    public VectorValue startingPosition;
 
  
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        transform.position = startingPosition.initialValue;
     }
 
     // Update is called once per frame
