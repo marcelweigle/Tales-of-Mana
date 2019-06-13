@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MoveScene : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class MoveScene : MonoBehaviour
         }
     }
 
-    public IEnumerator FadeCo()
+    public IEnumerator FadeCo() // IENumerator runs parallel and can have specific wait time
     {
         if(fadeOutPanel != null)
         {
@@ -44,4 +45,6 @@ public class MoveScene : MonoBehaviour
             yield return null;
         }
     }
+
+   
 }

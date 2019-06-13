@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
-    public bool isMagician;
+    public int isMagician;
     public VectorValue startingPosition;
 
  
@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         transform.position = startingPosition.initialValue;
+        isMagician = PlayerPrefs.GetInt("isMagician"); 
     }
 
     // Update is called once per frame
@@ -39,9 +40,14 @@ public class PlayerController : MonoBehaviour
         Move();
         Animate();
 
-        if (Input.GetButtonDown("Fire1") && isMagician)
+        if (Input.GetButtonDown("Fire1") && (isMagician == 1))
         {
             StartCoroutine(AttackCo());
+        }
+
+        if(isMagician == 1)
+        {
+            animator.SetInteger("isMagician", 1);
         }
         //Shoot();
     }
@@ -86,5 +92,14 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.position = shootingDirection;
         shootingDirection.Normalize();
 
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("MagicBook"))
+        {
+            isMagician = 1;
+            PlayerPrefs.SetInt("isMagician", 1);
+        }
     }
 }
