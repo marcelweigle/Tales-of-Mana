@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MagicBook
   - RoomNameTag
+  - Walls
   layers:
   - Default
   - TransparentFX

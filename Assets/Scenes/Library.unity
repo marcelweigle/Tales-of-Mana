@@ -485,6 +485,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoomName
       objectReference: {fileID: 0}
+    - target: {fileID: 7236592977689234840, guid: 2786b47d6f726d54398e90155578be23,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7236592976983728575, guid: 2786b47d6f726d54398e90155578be23,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -588,11 +593,6 @@ PrefabInstance:
     - target: {fileID: 7236592976983728575, guid: 2786b47d6f726d54398e90155578be23,
         type: 3}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7236592977689234840, guid: 2786b47d6f726d54398e90155578be23,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6750,13 +6750,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MOVEMENT_BASE_SPEED: 3
+  FIREBALL_BASE_SPEED: 6
   movementDirection: {x: 0, y: 0}
   movementSpeed: 0
   endOfAiming: 0
+  startingPosition: {fileID: 11400000, guid: 0da856eb62f559143bdb09b8b8b4f8cf, type: 2}
+  isMagician: 0
+  lastMovementDirection: {x: 0, y: 0}
   rb: {fileID: 1572400398}
   animator: {fileID: 1572400397}
-  isMagician: 0
-  startingPosition: {fileID: 11400000, guid: 0da856eb62f559143bdb09b8b8b4f8cf, type: 2}
+  fireballPrefab: {fileID: 1082393087106171783, guid: c68384fb065640a448b9f411df8c757a,
+    type: 3}
 --- !u!4 &1572400400
 Transform:
   m_ObjectHideFlags: 0
