@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public VectorValue startingPosition;
     public int isMagician;
     public Vector2 lastMovementDirection;
+    public FloatValue currentHealth;
 
     [Space]
     [Header("References:")]  
@@ -107,11 +108,14 @@ public class PlayerController : MonoBehaviour
         shootingDirection.Normalize();
 
         if(endOfAiming && isMagician==1){
+            // fireball nur das optische, logik in fireballScript
             GameObject fireball = Instantiate(fireballPrefab, transform.position, Quaternion.identity);  // Quaternion.identity means keep orientation/rotation
             
+            // logic des Fireballs (Damage, hitdetection etc.) ist in fireballScript
             Fireball fireballScript = fireball.GetComponent<Fireball>();
             fireballScript.velocity = shootingDirection * FIREBALL_BASE_SPEED;
             fireballScript.wizard = gameObject; // gameObject is build in; in this case is the wizard/main character
+
             fireball.GetComponent<Fireball>().velocity = shootingDirection * FIREBALL_BASE_SPEED;
             fireball.transform.Rotate(0, 0, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
             fireball.transform.Translate(1, 0, 0);
