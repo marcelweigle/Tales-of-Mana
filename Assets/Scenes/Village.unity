@@ -9155,31 +9155,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1071240229 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7255858895823546391, guid: d6179405df4e77c4082ce6250284709b,
-    type: 3}
-  m_PrefabInstance: {fileID: 7255858895265490965}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1071240235
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071240229}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 00969fe08a2c6914bb6d1f2fa724f7f0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1685984241
 GameObject:
   m_ObjectHideFlags: 0
@@ -14509,34 +14484,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8670867995772645015, guid: d6179405df4e77c4082ce6250284709b,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8670867995772645015, guid: d6179405df4e77c4082ce6250284709b,
-        type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1071240235}
-    - target: {fileID: 0}
-      propertyPath: health
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: maxHealth
-      value: 
-      objectReference: {fileID: 11400000, guid: 518cd0f1fdd46d2478fb1c9b3b392928,
-        type: 2}
     - target: {fileID: 7255858895823546391, guid: d6179405df4e77c4082ce6250284709b,
         type: 3}
       propertyPath: m_Name
       value: enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 7255858895823546391, guid: d6179405df4e77c4082ce6250284709b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7255858895823546386, guid: d6179405df4e77c4082ce6250284709b,
         type: 3}
