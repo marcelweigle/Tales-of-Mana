@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemySkript : MonoBehaviour
 {
 
     private float health = 2;
     public string enemyName;
-    public int baseAttack;
-    public float moveSpeed;
+    public int baseAttack = 1;
+    public float moveSpeed = 3;
     public FloatValue maxHealth;
     public Animator animator;
 
@@ -23,17 +23,17 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         
-        Debug.Log("Damage, Health: " + health);
+        //Debug.Log("Damage, Health: " + health);
 
         health = health - damage;
 
-        Debug.Log("Damage: " + damage);
-        Debug.Log("Damage dealt! Health left: " + health);
+        Debug.Log("Enemy Skript Damage: " + damage);
+        Debug.Log("Enemy Skript Damage dealt! Health left: " + health);
 
         if(health <= 0)
         {
             StartCoroutine(PlayDeathAnimation());
-            Debug.Log("enemy killed");
+            //Debug.Log("enemy killed");
         }
     }
 

@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 2745086553961659055}
   - component: {fileID: 2745086553961659218}
   m_Layer: 0
-  m_Name: MainCharacter
+  m_Name: MainCharacterPrefab
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -242,6 +242,7 @@ MonoBehaviour:
   startingPosition: {fileID: 11400000, guid: 0da856eb62f559143bdb09b8b8b4f8cf, type: 2}
   isMagician: 0
   lastMovementDirection: {x: 0, y: 0}
+  currentHealth: 10
   rb: {fileID: 2745086553961659217}
   animator: {fileID: 2745086553961659054}
   fireballPrefab: {fileID: 1082393087106171783, guid: c68384fb065640a448b9f411df8c757a,

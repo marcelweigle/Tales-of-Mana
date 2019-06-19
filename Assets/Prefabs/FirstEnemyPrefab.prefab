@@ -153,9 +153,11 @@ MonoBehaviour:
   chaseRadius: 5
   attackRadius: 3
   homePosition: {fileID: 0}
-  firstAttack: {fileID: 1082393087106171783, guid: c68384fb065640a448b9f411df8c757a,
+  enemyProjectilePrefab: {fileID: 1784921539592237414, guid: dfc70b3e01cb5af46a001db33f79dbbd,
     type: 3}
   firstAttackSpeed: 1
+  shootingCooldown: 1
+  shootingNotOnCooldown: 1
 --- !u!95 &1071240235
 Animator:
   serializedVersion: 3

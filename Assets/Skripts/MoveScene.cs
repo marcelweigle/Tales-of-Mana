@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class MoveScene : MonoBehaviour
 {
-    [SerializeField] private string newLevel;
+    [SerializeField] 
+    private string newLevel;
     public Vector2 playerPosition;
     public VectorValue playerStorage;
     public GameObject fadeInPanel;
@@ -27,7 +28,6 @@ public class MoveScene : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerStorage.initialValue = playerPosition;
-            //SceneManager.LoadScene(newLevel);
             StartCoroutine(FadeCo());
         }
     }

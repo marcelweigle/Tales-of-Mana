@@ -2,44 +2,50 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fireball : MonoBehaviour
+public class EnemyProjectileSkript : MonoBehaviour
 {
     public Vector2 velocity = new Vector2(0.0f, 0.0f);
-    public GameObject wizard;
     public Vector2 offset = new Vector2(0.0f, 0.0f);
-    public float damage;
-    private bool enemyHit = true;
+    public float damage = 1;
+    private bool playerAlreadyHit = true;
     public Animator animator;
+    public GameObject enemyObject;
 
 
     void Update()
     {
+        
+
         Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
         Vector2 newPosition = currentPosition + velocity * Time.deltaTime;
+
+        //Debug.Log("currentPosition: "+currentPosition+" newPosition: "+newPosition);
 
         RaycastHit2D[] hits = Physics2D.LinecastAll(currentPosition + offset, newPosition + offset);
 
         foreach (RaycastHit2D hit in hits)
         {
+            Debug.Log("foreach RaycastHit2D wird durchlaufen");
             GameObject other = hit.collider.gameObject;
-            if (other != wizard) {
+            if (other != enemyObject) {
+                Debug.Log("other != enemyObject is true");
                 if(other.CompareTag("Walls"))
                 {
                     Destroy(gameObject);
                     break;
                 }
-                if(other.CompareTag("Enemy"))
+                if(other.CompareTag("Player"))
                 {
+                    Debug.Log("Enemy hit a Player with Raycast!");
                     // to remove bug multiple hit with Collider of same Enemy (and multiple TakeDamage)
-                    if(enemyHit)
+                    if(playerAlreadyHit)
                     {
-                        enemyHit = false;
-                        Debug.Log("Enemy hit detected by RayCast!");
+                        playerAlreadyHit = false;
+                        //Debug.Log("Enemy hit detected by RayCast!");
                         StartCoroutine(PlayHitAnimation());
-                        other.GetComponent<FirstEnemy>().TakeDamage(damage);
+                        other.GetComponent<PlayerController>().TakeDamage(damage);
                         break;
                     }
-                    
                 }
             }
         }

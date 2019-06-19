@@ -11,34 +11,34 @@ public class PlayerController : MonoBehaviour
     public float FIREBALL_BASE_SPEED = 1.0f;
 
     [Space]
-    [Header("Character statistics:")]  
+    [Header("Character statistics:")]
     public Vector2 movementDirection;
     public float movementSpeed;
     public bool endOfAiming;
     public VectorValue startingPosition;
     public int isMagician;
     public Vector2 lastMovementDirection;
-    public FloatValue currentHealth;
+    public float currentHealth = 10f;
 
     [Space]
-    [Header("References:")]  
+    [Header("References:")]
     public Rigidbody2D rb;
     public Animator animator;
 
     [Space]
-    [Header("Prefabs:")]  
+    [Header("Prefabs:")]
     public GameObject fireballPrefab;
 
-    
-    
 
- 
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         transform.position = startingPosition.initialValue;
-        isMagician = PlayerPrefs.GetInt("isMagician"); 
+        isMagician = PlayerPrefs.GetInt("isMagician");
     }
 
     // Update is called once per frame
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(AttackCo());
         }
 
-        if(isMagician == 1)
+        if (isMagician == 1)
         {
             animator.SetInteger("isMagician", 1);
         }
@@ -72,16 +72,17 @@ public class PlayerController : MonoBehaviour
     void ProcessInputs()
     {
         movementDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        movementSpeed = Mathf.Clamp( movementDirection.magnitude, 0.0f, 1.0f);  // first value to clamp, min, max : Clamp to handle different Controller Input to behave the same
+        movementSpeed = Mathf.Clamp(movementDirection.magnitude, 0.0f, 1.0f);  // first value to clamp, min, max : Clamp to handle different Controller Input to behave the same
         movementDirection.Normalize(); // to dont change the speed of archer when using movementDirection
 
         // save InputDirection for movement only if currently moving(either horizontal or vertical equals 1), cause its 0 else
         // used for spawning fireball
-        if((Input.GetAxisRaw("Horizontal") != 0) | (Input.GetAxisRaw("Vertical") != 0) ){
+        if ((Input.GetAxisRaw("Horizontal") != 0) | (Input.GetAxisRaw("Vertical") != 0))
+        {
             lastMovementDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
             lastMovementDirection.Normalize();
         }
-        
+
         endOfAiming = Input.GetButtonUp("Fire1");
     }
 
@@ -92,12 +93,12 @@ public class PlayerController : MonoBehaviour
 
     void Animate()
     {
-        if(movementDirection != Vector2.zero) // that the character doesnt turn to front when stop moving
+        if (movementDirection != Vector2.zero) // that the character doesnt turn to front when stop moving
         {
             animator.SetFloat("Horizontal", movementDirection.x);
             animator.SetFloat("Vertical", movementDirection.y);
         }
-        
+
         animator.SetFloat("Speed", movementSpeed);
     }
 
@@ -107,16 +108,17 @@ public class PlayerController : MonoBehaviour
         Vector2 shootingDirection = lastMovementDirection;
         shootingDirection.Normalize();
 
-        if(endOfAiming && isMagician==1){
+        if (endOfAiming && isMagician == 1)
+        {
             // fireball nur das optische, logik in fireballScript
             GameObject fireball = Instantiate(fireballPrefab, transform.position, Quaternion.identity);  // Quaternion.identity means keep orientation/rotation
-            
+
             // logic des Fireballs (Damage, hitdetection etc.) ist in fireballScript
-            Fireball fireballScript = fireball.GetComponent<Fireball>();
+            FireballProjectileSkript fireballScript = fireball.GetComponent<FireballProjectileSkript>();
             fireballScript.velocity = shootingDirection * FIREBALL_BASE_SPEED;
             fireballScript.wizard = gameObject; // gameObject is build in; in this case is the wizard/main character
 
-            fireball.GetComponent<Fireball>().velocity = shootingDirection * FIREBALL_BASE_SPEED;
+            fireball.GetComponent<FireballProjectileSkript>().velocity = shootingDirection * FIREBALL_BASE_SPEED;
             fireball.transform.Rotate(0, 0, Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg);
             fireball.transform.Translate(1, 0, 0);
             Destroy(fireball, 2.0f);
@@ -130,5 +132,28 @@ public class PlayerController : MonoBehaviour
             isMagician = 1;
             PlayerPrefs.SetInt("isMagician", 1);
         }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        //Debug.Log("Damage, Health: " + health);
+
+        currentHealth = currentHealth - damage;
+
+        Debug.Log("Damage: " + damage);
+        Debug.Log("Damage dealt! Health left: " + currentHealth);
+
+        if (currentHealth <= 0)
+        {
+            StartCoroutine(PlayDeathAnimation());
+            //Debug.Log("enemy killed");
+        }
+    }
+
+    private IEnumerator PlayDeathAnimation() // Coroutine läuft parallel ab
+    {
+        animator.SetBool("isDeath", true);
+        yield return new WaitForSeconds(1); //wait animation time
+        this.gameObject.SetActive(false);
     }
 }
