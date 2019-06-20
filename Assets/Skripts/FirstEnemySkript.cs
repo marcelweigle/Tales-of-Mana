@@ -18,7 +18,7 @@ public class FirstEnemySkript : EnemySkript
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.FindWithTag("Player").transform;
+        //target = GameObject.FindWithTag("Player").transform;
     }
 
     // Update is called once per frame
@@ -46,7 +46,7 @@ public class FirstEnemySkript : EnemySkript
 
             if(Vector3.Distance(target.position, transform.position) < attackRadius)
             {
-                Debug.Log("Enemy shooting!");
+                //Debug.Log("Enemy shooting!");
                 Vector2 shootingDirection = -(transform.position-target.position);
                 shootingDirection.Normalize();
                 //Debug.Log("shootingDirection: "+shootingDirection);

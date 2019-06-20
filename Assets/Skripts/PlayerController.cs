@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     [Header("Character attributes:")]
     public float MOVEMENT_BASE_SPEED = 1.0f; // to set speed in editor
     public float FIREBALL_BASE_SPEED = 1.0f;
+    public float shootingCooldown = 1;
+    
 
     [Space]
     [Header("Character statistics:")]
@@ -18,12 +20,14 @@ public class PlayerController : MonoBehaviour
     public VectorValue startingPosition;
     public int isMagician;
     public Vector2 lastMovementDirection;
-    public float currentHealth = 10f;
+    public FloatValue currentHealth;
+    public bool shootingNotOnCooldown = true;
 
     [Space]
     [Header("References:")]
     public Rigidbody2D rb;
     public Animator animator;
+    public SignalEvent playerHealthSignal;
 
     [Space]
     [Header("Prefabs:")]
@@ -108,8 +112,11 @@ public class PlayerController : MonoBehaviour
         Vector2 shootingDirection = lastMovementDirection;
         shootingDirection.Normalize();
 
-        if (endOfAiming && isMagician == 1)
+        if (endOfAiming && isMagician == 1 && shootingNotOnCooldown)
         {
+            shootingNotOnCooldown = false;
+            StartCoroutine(ProcessShootingCooldown());
+
             // fireball nur das optische, logik in fireballScript
             GameObject fireball = Instantiate(fireballPrefab, transform.position, Quaternion.identity);  // Quaternion.identity means keep orientation/rotation
 
@@ -125,6 +132,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private IEnumerator ProcessShootingCooldown() // Coroutine läuft parallel ab
+    {
+        yield return new WaitForSeconds(shootingCooldown); //wait animation time
+        shootingNotOnCooldown = true;
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("MagicBook"))
@@ -138,12 +151,13 @@ public class PlayerController : MonoBehaviour
     {
         //Debug.Log("Damage, Health: " + health);
 
-        currentHealth = currentHealth - damage;
+        currentHealth.RuntimeValue -= damage;
+        playerHealthSignal.Raise();
 
-        Debug.Log("Damage: " + damage);
-        Debug.Log("Damage dealt! Health left: " + currentHealth);
+        //Debug.Log("Damage: " + damage);
+        //Debug.Log("Damage dealt! Health left: " + currentHealth.initialValue);
 
-        if (currentHealth <= 0)
+        if (currentHealth.RuntimeValue <= 0)
         {
             StartCoroutine(PlayDeathAnimation());
             //Debug.Log("enemy killed");

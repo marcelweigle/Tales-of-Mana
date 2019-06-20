@@ -155,7 +155,7 @@ MonoBehaviour:
   homePosition: {fileID: 0}
   enemyProjectilePrefab: {fileID: 1784921539592237414, guid: dfc70b3e01cb5af46a001db33f79dbbd,
     type: 3}
-  firstAttackSpeed: 1
+  firstAttackSpeed: 3
   shootingCooldown: 1
   shootingNotOnCooldown: 1
 --- !u!95 &1071240235

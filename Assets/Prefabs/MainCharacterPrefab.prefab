@@ -242,9 +242,10 @@ MonoBehaviour:
   startingPosition: {fileID: 11400000, guid: 0da856eb62f559143bdb09b8b8b4f8cf, type: 2}
   isMagician: 0
   lastMovementDirection: {x: 0, y: 0}
-  currentHealth: 10
+  currentHealth: {fileID: 11400000, guid: d7f99dc84ee1c0f4e9b6fec990aab8fe, type: 2}
   rb: {fileID: 2745086553961659217}
   animator: {fileID: 2745086553961659054}
+  playerHealthSignal: {fileID: 11400000, guid: 8741e412e6c7f0249a82f216d57122fb, type: 2}
   fireballPrefab: {fileID: 1082393087106171783, guid: c68384fb065640a448b9f411df8c757a,
     type: 3}
 --- !u!50 &2745086553961659217
@@ -350,7 +351,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000011920929, y: -0.32102692}
+  m_Offset: {x: -0.00000011920929, y: -0.0000731647}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -361,7 +362,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5173727, y: 0.18598473}
+  m_Size: {x: 0.5173727, y: 0.82789224}
   m_EdgeRadius: 0
 --- !u!1 &2745086554235005393
 GameObject:
