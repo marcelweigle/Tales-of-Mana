@@ -130,6 +130,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -236,6 +237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MOVEMENT_BASE_SPEED: 3
   FIREBALL_BASE_SPEED: 6
+  shootingCooldown: 0.5
   movementDirection: {x: 0, y: 0}
   movementSpeed: 0
   endOfAiming: 1
@@ -243,6 +245,7 @@ MonoBehaviour:
   isMagician: 0
   lastMovementDirection: {x: 0, y: 0}
   currentHealth: {fileID: 11400000, guid: d7f99dc84ee1c0f4e9b6fec990aab8fe, type: 2}
+  shootingNotOnCooldown: 1
   rb: {fileID: 2745086553961659217}
   animator: {fileID: 2745086553961659054}
   playerHealthSignal: {fileID: 11400000, guid: 8741e412e6c7f0249a82f216d57122fb, type: 2}
@@ -302,6 +305,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -409,6 +413,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

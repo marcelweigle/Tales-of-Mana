@@ -5,22 +5,49 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
+  - enabled: 1
+    path: Assets/Scenes/1.Village.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Basement.unity
+    path: Assets/Scenes/trash/Basement.unity
     guid: 553178c4b001cc640981ea8b73253d9b
   - enabled: 1
-    path: Assets/Scenes/Library.unity
+    path: Assets/Scenes/trash/LibraryOld.unity
     guid: f9845bd078b65334ea5910c5e0c9942c
   - enabled: 1
-    path: Assets/Scenes/Village.unity
+    path: Assets/Scenes/trash/VillageOld.unity
     guid: 1f0ef95ffec3d5d4fb50ebd06758f010
   - enabled: 1
     path: "Assets/Scenes/Men\xFC.unity"
     guid: d069b44b8f836ec41905bf455640ec79
   - enabled: 1
-    path: Assets/Scenes/Forest.unity
+    path: Assets/Scenes/trash/Forest.unity
     guid: eec70fbb3fa66ea4291af88fe2e5f05e
+  - enabled: 1
+    path: Assets/Scenes/trash/dog_house.unity
+    guid: 1fe1108520c7e0948957af5396f1568a
+  - enabled: 1
+    path: Assets/Scenes/2.house_1.unity
+    guid: 6c91ff1e70632744cb9408cb0f3ea91c
+  - enabled: 1
+    path: Assets/Scenes/2.house_2.unity
+    guid: 33fc4541760a6184f89a3ce7ef0bb4ac
+  - enabled: 1
+    path: Assets/Scenes/3.house_3.unity
+    guid: 5959cbc75d57d574bba30888b5c353d7
+  - enabled: 1
+    path: Assets/Scenes/4.Lager.unity
+    guid: 1ec04b86b035cbc44be245e6559536ad
+  - enabled: 1
+    path: Assets/Scenes/6.Library.unity
+    guid: e64c6f7a8615d8e4badfb85727eacee1
+  - enabled: 1
+    path: Assets/Scenes/7.Library_Cellar.unity
+    guid: a2ae2ccdfc35cbf46b9171ccc85439fd
+  - enabled: 1
+    path: Assets/Scenes/5.Speisesaal.unity
+    guid: 7211e8be1b35e044f9121d3eec6e863a
+  - enabled: 1
+    path: Assets/Scenes/WorldArea_1.unity
+    guid: 273f81bb03237cf44b54d42561bbf579
   m_configObjects: {}
