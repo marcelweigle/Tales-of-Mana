@@ -1,0 +1,775 @@
+fileFormatVersion: 2
+guid: c7435a5ae56b8bf478890ccc13f37c50
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5564405514909202731
+    second: dragon movement-Sheet_0
+  - first:
+      213: 2197950313577703102
+    second: dragon movement-Sheet_1
+  - first:
+      213: 3877836981776924057
+    second: dragon movement-Sheet_2
+  - first:
+      213: 2616494405642054382
+    second: dragon movement-Sheet_3
+  - first:
+      213: 5280436084625759029
+    second: dragon movement-Sheet_4
+  - first:
+      213: -5033223431465620136
+    second: dragon movement-Sheet_5
+  - first:
+      213: -258422871622855748
+    second: dragon movement-Sheet_6
+  - first:
+      213: 4047082005212568822
+    second: dragon movement-Sheet_7
+  - first:
+      213: -6703505930009061702
+    second: dragon movement-Sheet_8
+  - first:
+      213: -812001206904704174
+    second: dragon movement-Sheet_9
+  - first:
+      213: -700547876350203753
+    second: dragon movement-Sheet_10
+  - first:
+      213: 649602880278837302
+    second: dragon movement-Sheet_11
+  - first:
+      213: -7665828383192875196
+    second: dragon movement-Sheet_12
+  - first:
+      213: 2506771376918675778
+    second: dragon movement-Sheet_13
+  - first:
+      213: 2617017037448995510
+    second: dragon movement-Sheet_14
+  - first:
+      213: -8951322186805941166
+    second: dragon movement-Sheet_15
+  - first:
+      213: -470238412669916071
+    second: dragon movement-Sheet_16
+  - first:
+      213: -1135215774865979082
+    second: dragon movement-Sheet_17
+  - first:
+      213: 3204827244360085725
+    second: dragon movement-Sheet_18
+  - first:
+      213: -1966902701613643161
+    second: dragon movement-Sheet_19
+  - first:
+      213: 6673327255134435299
+    second: dragon movement-Sheet_20
+  - first:
+      213: 456742346655358906
+    second: dragon movement-Sheet_21
+  - first:
+      213: -807570806711033436
+    second: dragon movement-Sheet_22
+  - first:
+      213: 9001948991841150585
+    second: dragon movement-Sheet_23
+  - first:
+      213: 774693661795620256
+    second: dragon movement-Sheet_24
+  - first:
+      213: -9219037645314101393
+    second: dragon movement-Sheet_25
+  - first:
+      213: 5255400434419960581
+    second: dragon movement-Sheet_26
+  - first:
+      213: 3084523443326555870
+    second: dragon movement-Sheet_27
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dragon movement-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 500
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b010b5b605e1f2847a708ffdf21b11c7
+      internalID: -5564405514909202731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 500
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f56c3ebd98424684f973987846ab1ba9
+      internalID: 2197950313577703102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 500
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafac4f8cf5aaff42b608d9c5d44c181
+      internalID: 3877836981776924057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 500
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa9662a07ccc0b49878d24d5c997756
+      internalID: 2616494405642054382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 500
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8197b5ab634694a4382e22bdf8036d59
+      internalID: 5280436084625759029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 400
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b7f08839012474292a7907db4f6485
+      internalID: -5033223431465620136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 400
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8790b66030ca04e84dc0adb77463c1
+      internalID: -258422871622855748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 400
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb4e923bfca7be4c87e97526d9101ad
+      internalID: 4047082005212568822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 400
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b041c7346bc08c24b9e00b21e17d79a0
+      internalID: -6703505930009061702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 400
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a91d414c37b57944b085f218b861a78
+      internalID: -812001206904704174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 300
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 055159e7f65000247b156c55e6a314c8
+      internalID: -700547876350203753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 300
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b445e1ba85aca42902de96d0162b57
+      internalID: 649602880278837302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 300
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0eddfc2cdca7a42986c5411730590d
+      internalID: -7665828383192875196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 300
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3868fd7e842714391efd21dba6301f
+      internalID: 2506771376918675778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 300
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 908bf82857635a340b8c5cf0acfa4e92
+      internalID: 2617017037448995510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 200
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bffc7f6e6d6f2749af7e575f46a340a
+      internalID: -8951322186805941166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 200
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2593e7b5224a18147b428b713b18a810
+      internalID: -470238412669916071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 200
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69f181417559784681a8a98716004bd
+      internalID: -1135215774865979082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 200
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20891813397c4d74cbdec2531327dd1a
+      internalID: 3204827244360085725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 200
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ae6b86b5a854d458ab1c61c98e0b95
+      internalID: -1966902701613643161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 100
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5614bacb970f94ab40710bf025b6fd
+      internalID: 6673327255134435299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 100
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f4cc3bf5184ab41a79d5326fd6a1ac
+      internalID: 456742346655358906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 100
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ac196f7a3ca104cb6deb2b354695fd
+      internalID: -807570806711033436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 100
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b3183aab262f943a35c37f39bee233
+      internalID: 9001948991841150585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 100
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0fc1f8dcd65cb743ab6dccc68cee47f
+      internalID: 774693661795620256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa37b4e884fb15b4cab923a6b0d4f795
+      internalID: -9219037645314101393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 0
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bac16c7d83c0f54786121a299bcf12d
+      internalID: 5255400434419960581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon movement-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 0
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9886d79a5492846b026b1d744eeb37
+      internalID: 3084523443326555870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
